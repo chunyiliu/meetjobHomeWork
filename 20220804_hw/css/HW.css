@@ -1,0 +1,65 @@
+
+
+body{
+	margin:0 auto;
+	height: 100%;
+}
+
+#wrapper{
+	min-height: 100%; /* 整個區塊高度為100%*/
+	margin-bottom: -100px; /* 等一下 footer 的高度會是100px*/
+}
+
+#banner{
+	height: 70px;
+	width: 100%;
+}
+
+#menu{
+	height: 50px;
+	width: 100%;
+	background-color: #DB7813;
+	color: #ffffff; /*區塊內的文字為白色*/
+}
+
+#content{
+	width: 100%;
+	min-height: 300px;
+}
+
+#footer{
+	height: 100px;
+	width: 100%;
+	background-color: #000000;
+	color: #ffffff;
+}
+
+.logo img{
+	float: left;
+	height: 70px;
+	margin-left: 3%;
+}
+
+.small_photo{
+	margin-right: 20px;
+}
+
+.small_photo img{
+	float: right;
+	margin-top: 40px;
+	margin-right: 2px;
+
+}
+
+.photo{
+	float: left;
+	height: 250px;
+	width: 250px;
+	margin-left: 50px;
+	margin-top: 30px;
+}
+
+.photo img{
+	height: 100%;
+	width: 100%;
+}
