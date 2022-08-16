@@ -93,7 +93,7 @@ a{
 	float:left;
 	width: 64.4%;
 	border:1px solid #ccc;
-	height: 500px;
+	height: 450px;
 	padding-left: 1%;
 	padding-top: 0.6%;
 	font-size: 32px;
@@ -106,7 +106,7 @@ a{
 	width: 64.4%;
 	border:1px solid #ccc;
 	text-align: left;
-	height: 500px;
+	height: 450px;
 	padding-left: 1%;
 	padding-top: 0.6%;
 	font-size: 32px;
@@ -118,7 +118,7 @@ a{
 	width: 34.3%;
 	border:1px solid #ccc;
 	text-align: center;
-	height: 1020px;
+	height: 920px;
 }
 
 .baseItem{
@@ -131,7 +131,7 @@ a{
 .baseItem li{
 	float:right;
 	list-style: none;
-	padding:20px;
+	padding:10px;
 	text-align: left;
 }
 
@@ -140,7 +140,7 @@ a{
 	margin-left: 2%;
 	width: 48%;
 	float:left;
-	height: 450px;
+	height: 400px;
 }
 #teamLogo img{
 
@@ -150,17 +150,17 @@ a{
 
 #teamName{
 	width: 48%;
-	float:right;
-	height: 450px;
+	float:left;
+	height: 400px;
 }
 #teamName ol{
 	text-align: center;
 	list-style: none;
-	padding:2px;
-	margin: 2px;
+	padding:1px;
+	margin: 1px;
 	font-style: italic;
 	font-weight: bold;
-	height: 90px;
+	height: 80px;
 }
 
 #teamName a{
@@ -171,9 +171,9 @@ a{
 	/*border:1px solid #ff0000;*/
 	width: 100%;
 	height: 50%;
-	padding-top: 1%;
-	margin-top:1%;
-	margin-bottom:1%;
+	padding-top: 1px;
+	margin-top:1px;
+	margin-bottom:1px;
 }
 
 .member img{
@@ -184,7 +184,7 @@ a{
 
 .member p{
 	font-weight: bold;
-	font-size: 16px;
+	font-size: 14px;
 	text-align: center;
 
 }
