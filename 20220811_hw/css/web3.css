@@ -1,0 +1,214 @@
+
+
+body{
+	margin:0 auto;
+	height: 100%;
+}
+
+a{
+	color:#ffffff;
+	text-decoration: none; /*不要有底線*/
+	font-weight: bold;/*粗體*/
+}
+
+#wrapper{
+	min-height: 100%; /* 整個區塊高度為100%*/
+	margin-bottom: -100px; /* 等一下 footer 的高度會是100px*/
+}
+
+#banner{
+	height: 70px;
+	width: 100%;
+}
+
+#menu{
+	height: 50px;
+	width: 100%;
+	background-color: #DB7813;
+	color: #ffffff; /*區塊內的文字為白色*/
+}
+
+#content{
+	width: 100%;
+	min-height: 300px;
+}
+
+
+#footer{
+	height: 100px;
+	width: 100%;
+	background-color: #000000;
+	color: #ffffff;
+	text-align: center;/*對齊置中*/
+	clear: both;/*清除 float 效果*/
+}
+
+#footer span{
+	font-size: 20px;
+}
+
+#menu ul{
+	margin-left: 18%;
+	color:#ffffff;
+	padding-top: 10px;
+	font-size: 22px;
+}
+
+#menu li{
+	list-style: none;  /*前面不要有項目符號*/
+	float: left;
+	padding-left: 2em;
+	padding-right: 2em;
+}
+
+#logo{
+	float: left;
+	margin-left: 2em;
+}
+
+#logo img{
+	width: 100%;
+}
+
+#fb{
+	float: right; 
+	margin-right: 1em;
+}
+
+#fb img{
+	width: 50%;
+}
+
+#ig{
+	float: right;
+	margin-right: 1em;
+}
+
+#ig img{
+	width: 50%;
+}
+
+
+#left_up{
+	float:left;
+	width: 64.4%;
+	border:1px solid #ccc;
+	height: 500px;
+	padding-left: 1%;
+	padding-top: 0.6%;
+	font-size: 32px;
+}
+
+
+
+#left_down{
+	float:left;
+	width: 64.4%;
+	border:1px solid #ccc;
+	text-align: left;
+	height: 500px;
+	padding-left: 1%;
+	padding-top: 0.6%;
+	font-size: 32px;
+}
+
+
+#right{
+	float:right;
+	width: 34.3%;
+	border:1px solid #ccc;
+	text-align: center;
+	height: 1020px;
+}
+
+.baseItem{
+	
+	width: 100%;
+	font-size: 20px;
+
+}
+
+.baseItem li{
+	float:right;
+	list-style: none;
+	padding:20px;
+	text-align: left;
+}
+
+
+#teamLogo{
+	margin-left: 2%;
+	width: 48%;
+	float:left;
+	height: 450px;
+}
+#teamLogo img{
+
+	width: 100%;
+	height: 400px;
+}
+
+#teamName{
+	width: 48%;
+	float:right;
+	height: 450px;
+}
+#teamName ol{
+	text-align: center;
+	list-style: none;
+	padding:2px;
+	margin: 2px;
+	font-style: italic;
+	font-weight: bold;
+	height: 90px;
+}
+
+#teamName a{
+	color: #000;	
+}
+
+.member{
+	/*border:1px solid #ff0000;*/
+	width: 100%;
+	height: 50%;
+	padding-top: 1%;
+	margin-top:1%;
+	margin-bottom:1%;
+}
+
+.member img{
+	width: 100%;
+	height: 65%;
+
+}
+
+.member p{
+	font-weight: bold;
+	font-size: 16px;
+	text-align: center;
+
+}
+
+.member a{
+
+	color: #000;
+}
+
+
+/*
+px  絕對單位 ，代表螢幕中的每一個點
+
+em 相對單位，每個子元素透過倍數 乘以父元素的px 值
+
+10px=0.625em
+
+https://www.w3big.com/zh-TW/tags/ref-pxtoemconversion.html#gsc.tab=0
+
+
+
+div 隔間 每一個區塊
+
+span 在是在標籤內的細部字
+
+
+*/
