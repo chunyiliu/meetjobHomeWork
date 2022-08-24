@@ -1,0 +1,166 @@
+
+<html>
+	<head>
+		<title>HW</title>
+		<meta charset="utf-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<style>
+			body{
+				margin:0 auto;
+				background-color:#81C0C0;
+			}
+			#banner{
+				width: 100%;
+				height: 50px;
+			}
+			#menu{
+				width: 100%;
+				height: 25px;
+
+			}
+
+			#menulist , #menulist ul{
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+			#menulist{
+				position:absolute; /*定位: fix 固定,absolute 依照父位置做絕對位置*/
+				background-color:#81C0C0;
+				width: 100%;
+				padding-left: 22%
+			}
+			#menulist li{
+				border-right:1px solid #FFD1A4;
+				float: left;
+				background-color:#FFD1A4;
+			}
+			#menulist li ul{
+				position: absolute; /*位置是絕對位置*/
+				left: auto; /*對於絕對位置的元素 ,會依內容需要的寬度來設置*/
+				width: 150px;
+				margin: 0;
+
+			}
+
+			#menulist a{
+				color: #000000;
+				display: block;
+				text-decoration:none; /*去除超連結下底線*/
+				width: 120px;
+				text-align: center;
+			}
+			.active{
+				background-color: #9999CC;
+			}
+			#photo{
+				margin-top: 10px;
+			}
+			#photo img{
+				width: 50%;
+				padding-left: 300px;
+			}
+			#btn{
+				margin-top: 10px;
+				margin-left: 40%;
+				background-color:#E1C4C4;
+			}
+	
+		</style>
+		<script>
+			$(document).ready(function(){
+				$("#menulist li ul").hide();
+				$("#menulist li").hover(
+					function(){
+						$(this).find("ul").slideDown("fast");
+						$(this).find("a:first").addClass("active");
+					},function(){
+						$(this).find(".submenu").fadeOut("fast");
+						$(this).find("a").removeClass("active");
+					}
+				)
+			});
+			$(document).ready(function(){
+				$("#word").hide();
+				$("#btn").click(function(){
+					$("#word").slideToggle();
+				})
+			});
+
+			function check(){
+				var age=document.getElementById("myAge").value
+				
+				if (age<15){
+					alert("你未滿15歲");
+				}else if(age>50){
+					alert("你超過50歲");
+				}else {
+				}
+			}
+
+		 </script>
+	</head>
+	<body>
+		<div id="banner">
+			
+		</div>
+		<div id="menu">
+			<ul id="menulist">
+
+
+				<li><a href="#">司馬家</a>
+					<ul class="submenu">
+						<li><a href="#">司馬懿</a></li>
+						<li><a href="#">司馬師</a></li>
+						<li><a href="#">司馬昭</a></li>
+						<li><a href="#">司馬敏</a></li>
+					</ul>
+				</li>
+
+				<li><a href="#">殘兵</a>
+					<ul class="submenu">
+						<li><a href="#">燎原火</a></li>
+						<li><a href="#">小孟</a></li>
+						<li><a href="#">郭昂</a></li>
+						<li><a href="#">張雷</a></li>
+					</ul>
+				</li>
+
+				<li><a href="#">八奇</a>
+					<ul class="submenu">
+						<li><a href="#">二奇：荀彧</a></li>
+						<li><a href="#">三奇：賈詡</a></li>
+						<li><a href="#">四奇：郭嘉</a></li>
+						<li><a href="#">七奇：諸葛亮</a></li>
+					</ul>
+				</li>
+
+
+				<li><a href="#">八怪</a>
+					<ul class="submenu">
+						<li><a href="#">南華老仙</a></li>
+						<li><a href="#">于吉</a></li>
+						<li><a href="#">左慈</a></li>
+						<li><a href="#">張魯</a></li>
+					</ul>
+				</li>
+
+				<li><a href="#">作者:陳某</a></li>
+
+			</ul>
+		</div>
+		<div id="photo">
+			<img src="img/1.jpg">
+		</div>
+
+		<button id="btn">點我點我點我點我點我</button>
+		<div id=word>
+			<p align="center" style="padding-right: 170px;color:#743A3A;font-size: 22px;font-weight:bold;">什麼是噹噹噹噹噹</p>
+		</div>
+
+		<form action="" method="post" align="center" style="padding-right: 170px; margin-top: 10px;">
+			<input type="number" id="myAge" name="age" />
+			<input type="submit" name="送出" onclick="check()"/>
+		</form>
+	</body>
+</html>
