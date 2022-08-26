@@ -1,0 +1,127 @@
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>HW</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+	<form id="form1" action="order.php" method="post">
+		<!--
+			fieldset:元素區塊,被包起來的視為同一個區塊,這個區塊會有邊框
+
+			legend:圖例
+
+			label: 用來讓表單來控制元件的說明標題,一般label裡面的for 對應的是 表單元件的id名稱
+					在寫label,可以將for省略
+
+		-->
+		<fieldset>
+			<legend>帳單資訊</legend>
+			<div>
+				<label for="name">姓名</label>
+				<input type="text" id="name" />
+			</div>
+
+			<div>
+				<label for="address">地址</label>
+				<input type="text" id="address" />
+			</div>
+
+			<div>
+				<span>付款方式</span>
+				<input type="radio" name="payment" value="creditcard" id="creditcard" checked/>
+				<label for=credit>信用卡</label>
+				<input type="radio" name="payment" value="transfer" id="transfer" />
+				<label for=transfer>轉帳</label>				
+			</div>
+
+			<div id="credit">
+				<div>
+					<label for="cardNumber">卡號:</label>
+					<input type="text" id="cardNumber" />
+					<!--
+						attr('disabled',true) 表示不可以輸入
+						attr('disabled',false) 表示可以輸入
+					-->
+				</div>
+				<div>
+					<label for="expiration">有效期限:</label>
+					<input type="text" id="expiration" />
+				</div>					
+			</div>
+
+		</fieldset>
+
+		<fieldset>
+			<legend>送貨地址</legend>
+			<div>
+				<input type="checkbox" id="hideShip" />
+				<label for="hideShip">同帳單地址</label>
+			</div> 
+			
+		<div id="sameaddr">
+			<div>
+				<label for="shipName">姓名:</label>
+				<input type="text" id="shipName" />
+			</div>
+
+			<div>
+				<label for="shipAddress">地址:</label>
+				<input type="text" id="shipAddress" />
+			</div>
+		</div>
+
+
+		</fieldset>
+	</form>
+
+	<script>
+
+
+		$(document).ready(function(){                       //預設是信用卡打勾
+
+			$("#transfer").click(function() {               //當轉帳被點擊(打勾)時 輸入框不可輸入
+
+				if ($("#transfer").is(":checked")){
+
+					$("#cardNumber").attr('disabled',true);
+					$("#expiration").attr('disabled',true);
+
+				} 
+				
+			})
+
+			$("#creditcard").click(function() {				//當信用卡被點擊(打勾)時 輸入框可輸入
+				if ($("#creditcard").is(":checked")){
+
+					$("#cardNumber").attr('disabled',false);
+					$("#expiration").attr('disabled',false);
+
+				}
+				
+			})
+
+
+
+
+
+			$("#hideShip").attr("checked",false); //預設是沒打勾 ,所以 一開始假設 與帳單地址不同
+			$("#hideShip").click(function(){      //當被點擊(打勾)時 
+
+				if( $('#hideShip').is(':checked')){    //如果有勾選  代表同帳單地址
+
+				    $("#sameaddr").slideUp("fast");    //收合
+
+				}
+				else{
+				    $("#sameaddr").slideDown("fast");  //表示沒被勾選 展開
+				}
+			})	
+
+		});
+
+
+	</script>
+</body>
+</html>
