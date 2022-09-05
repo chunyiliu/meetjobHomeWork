@@ -1,0 +1,480 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>作業</title>
+	<!-- https://www.tvbs.com.tw/ -->
+	<link rel="stylesheet" href="css/hw.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			// menu部分
+			$("#teamlist li ul").hide();
+			$("#teamlist li").hover(
+				function(){
+					$(this).find("ul").slideDown("fast");
+					$(this).find("a:first").addClass("active");
+					$("#menu").css("height","110px");
+				},function(){
+					$(this).find(".submenu").fadeOut("fast");
+					$(this).find("a").removeClass("active");
+					$("#menu").css("height","25px");
+				}
+			)
+			// content部分
+			var i =0;
+			var clone=$("#leftframe .img li").first().clone();
+			$("#leftframe .img").append(clone); 
+			
+			var size=$("#leftframe .img li").length; 
+			var t = setInterval(function(){
+				i++;
+				move();
+			},2000);
+
+			function move(){
+				if (i == size){
+					$("#leftframe .img").css({left:0});
+					i=1;
+				}
+				if (i == -1){
+					$("#leftframe .img").css({left:-(size -1)*900});
+					i=size-2;
+				}
+				$("#leftframe .img").stop().animate({left:-i *900},500);
+				
+			}
+
+			//此區域被滑鼠移入時
+			$("#leftframe").hover(function(){
+				clearInterval(t); //清除計時器
+
+			},
+			function(){//滑鼠移出
+				t=setInterval(function(){
+					i++;
+					move();
+				},2000);
+			});
+
+			$("#leftframe .left").click(function(){
+				i++;
+				move();
+			})
+
+			$("#leftframe .right").click(function(){
+				i--;
+				move();
+			}) 
+			$("#bla").hide();
+			$("#mla").hide();
+			$("#fla").hide();
+			$("#lla").hide();
+			$("#dla").hide();
+
+			$("#btnb").click(function(){
+				$("#bla").slideToggle();
+				$("#item7").css({"min-height":"500"});
+			});
+			$("#btnm").click(function(){
+				$("#mla").slideToggle();
+				$("#item7").css({"min-height":"500"});
+			});
+			$("#btnf").click(function(){
+				$("#fla").slideToggle();
+				$("#item7").css({"min-height":"500"});
+			});
+			$("#btnl").click(function(){
+				$("#lla").slideToggle();
+				$("#item7").css({"min-height":"500"});
+			});
+			$("#btnd").click(function(){
+				$("#dla").slideToggle();
+				$("#item7").css({"min-height":"500"});
+			});
+
+		});
+	</script>
+</head>
+<body>
+	<div id=wrap>
+		<div id="banner">
+			<div id="logo">
+				<a href="https://www.cpbl.com.tw/" target="_blank"><img src="img/cpbl.png"></a>
+			</div>
+			<div class="wiki">
+				<a href="https://zh.m.wikipedia.org/zh-tw/%E4%B8%AD%E8%8F%AF%E8%81%B7%E6%A5%AD%E6%A3%92%E7%90%83%E5%A4%A7%E8%81%AF%E7%9B%9F" target="_blank"><img src="img/wiki.png" ></a>
+			</div>
+			<div class="wiki">
+				<a href="http://twbsball.dils.tku.edu.tw/wiki/index.php/%E4%B8%AD%E8%8F%AF%E8%81%B7%E6%A5%AD%E6%A3%92%E7%90%83%E5%A4%A7%E8%81%AF%E7%9B%9F" target="_blank"><img src="img/taiwan.jpg"></a>
+			</div>
+		</div>
+
+		<div id="menu">
+			<ul id="teamlist">
+				<li><a href="https://www.brothers.tw/" target="_blank">中信兄弟</a>
+					<ul class="submenu">
+						<li><a href="https://www.brothers.tw/news.php" target="_blank">最新消息</a></li>
+						<li><a href="https://www.brothers.tw/history.php" target="_blank">隊史</a></li>
+						<li><a href="https://www.brothers-shop.com.tw/brothers/" target="_blank">商城</a></li>
+					</ul>
+				</li>
+
+				<li><a href="https://monkeys.rakuten.com.tw/" target="_blank">樂天桃猿</a>
+					<ul class="submenu">
+						<li><a href="https://monkeys.rakuten.com.tw/news" target="_blank">最新消息</a></li>
+						<li><a href="https://monkeys.rakuten.com.tw/custom/236" target="_blank">隊史</a></li>
+						<li><a href="https://www.rakuten.com.tw/shop/monkeyshop/" target="_blank">商城</a></li>
+					</ul>
+				</li>
+
+
+				<li><a href="https://www.fubonguardians.com/content/masterpage/Index" target="_blank">富邦悍將</a>
+					<ul class="submenu">
+						<li><a href="https://www.fubonguardians.com/content/info/NewsList" target="_blank">最新消息</a></li>
+						<li><a href="https://www.fubonguardians.com/content/info/Team" target="_blank">隊史</a></li>
+						<li><a href="https://www.momoshop.com.tw/category/LgrpCategory.jsp?l_code=2141100000" target="_blank">商城</a></li>
+					</ul>
+				</li>
+
+				<li><a href="https://www.uni-lions.com.tw/" target="_blank">統一獅</a>
+					<ul class="submenu">
+						<li><a href="https://www.facebook.com/unilions" target="_blank">最新消息</a></li>
+						<li><a href="https://www.uni-lions.com.tw/team-story.aspx" target="_blank">隊史</a></li>
+						<li><a href="https://lioncrew.uni-lions.com.tw/" target="_blank">商城</a></li>
+					</ul>
+				</li>
+
+				<li><a href="https://www.wdragons.com/" target="_blank">味全龍</a>
+					<ul class="submenu">
+						<li><a href="https://www.wdragons.com/category/all/" target="_blank">最新消息</a></li>
+						<li><a href="https://www.wdragons.com/about/" target="_blank">隊史</a></li>
+						<li><a href="https://shop.wdragons.com/zh-TW" target="_blank">商城</a></li>
+					</ul>
+				</li>
+
+				<li>
+					<a href="#">台鋼雄鷹</a>
+				</li>
+			</ul>
+		</div>
+
+		<div id="content">
+			<div id="leftframe">
+				<ul class="img">
+					<li><img src="img/b.jpg"></li>
+					<li><img src="img/m.jpg"></li>
+					<li><img src="img/f.jpg"></li>
+					<li><img src="img/l.jpg"></li>
+					<li><img src="img/d.png"></li>
+				</ul>
+				<div class="btn left">&lt;</div>
+				<div class="btn right">&gt;</div>
+			</div>
+			<div id="rightpic">
+				<a href="https://pb.cpbl.com.tw/xmdoc/cont?xsmsid=0L113391521954478024&sid=0M244524538002275607" target="_blank">
+					<div class="magazine bg1">
+						<h2>龍星閃耀</h2><br/>
+						<h2>拿莫．伊漾</h2>
+					</div>
+				</a>
+				<a href="https://pb.cpbl.com.tw/xmdoc/cont?xsmsid=0L113391521954478024&sid=0M209512630519617185" target="_blank">
+					<div class="magazine bg2">
+						<h2>再戰王座</h2><br/>
+						<h2>盛夏球宴</h2>
+					</div>
+				</a>
+				<a href="https://pb.cpbl.com.tw/xmdoc/cont?xsmsid=0L113391521954478024&sid=0M181503760091891115" target="_blank">
+					<div class="magazine bg3">
+						<h2>投捕</h2><br/>
+						<h2>SOULMATE</h2>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div id="item1">
+
+			<div class="todaynews" >
+				<a href="https://www.cpbl.com.tw/xmdoc/cont?sid=0M246438112794450008" target="_blank">
+					<img src="img/01.jpeg">
+					<h2>德保拉11K一夫當關 中信兄弟4：0統一7-ELEVEn獅</h2>
+				</a>
+			</div>
+			<div class="todaynews" >
+				<a href="https://www.cpbl.com.tw/xmdoc/cont?sid=0M245002476571280123" target="_blank">
+					<img src="img/a2.jpg">
+					<h2>張政禹安打保龍隊不敗 悍將斬斷天母6連敗</h2>
+				</a>
+			</div>
+			<div class="nextnews">
+				<a href="https://www.cpbl.com.tw/xmdoc/cont?sid=0M244849744470962977" target="_blank">
+					<h2>麥力德7局無失分奪首勝 中信完封統一獅</h2>
+					<h2>2022/09/01 中信兄弟 統一7-ELEVEn獅</h2>
+				</a>
+				<hr>
+				<a href="https://www.cpbl.com.tw/xmdoc/cont?sid=0M244032421346699837" target="_blank">
+					<h2>林安可關鍵安 統一獅逆轉戰局阻斷兄弟連勝</h2>
+					<h2>2022/08/31 中信兄弟 統一7-ELEVEn獅</h2>
+				</a>
+				<hr>
+				<a href="https://www.cpbl.com.tw/xmdoc/cont?sid=0M243833498752322540" target="_blank">
+					<h2>林智勝298轟再攀高峰 猿龍大雨6局言和</h2>
+					<h2>2022/08/31 Rakuten Monkeys 味全龍</h2>
+				</a>
+				<hr>
+				<a href="https://www.cpbl.com.tw/xmdoc/cont?sid=0M243402818140150874" target="_blank">
+					<h2>朱育賢猛打賞 樂天7:3勝味全</h2>
+					<h2>2022/08/30 Rakuten Monkeys 味全龍</h2>
+				</a>
+				<hr>
+				<a href="https://www.cpbl.com.tw/xmdoc/cont?sid=0M242809146627857254" target="_blank">
+					<h2>陳柏豪7局優質好投 中信2:1擊退富邦</h2>
+					<h2>2022/08/30 中信兄弟 富邦悍將</h2>
+				</a>
+			</div>
+
+		</div>
+
+		<div id="item2">
+			<h2>中信兄弟</h2>
+			<div class="teamname" >
+				<div class="teamlogo1">
+					<img src="img/blogo.png">
+				</div>	
+				<div class="coach">
+					<img src="img/bc.jpg">
+					<h2>一軍總教練</h2>
+					<h2><a href="http://twbsball.dils.tku.edu.tw/wiki/index.php/%E6%9E%97%E5%A8%81%E5%8A%A9" target="_blank">林威助</a></h2>
+				</div>
+				<div class="coach1">
+					<img src="img/bc1.jpg">
+					<h2>首席教練</h2>
+					<h2><a href="http://twbsball.dils.tku.edu.tw/wiki/index.php/%E5%B9%B3%E9%87%8E%E6%81%B5%E4%B8%80" target="_blank">平野恵一</a></h2>
+				</div>	
+				<div class="coach2">
+					<img src="img/bc2.jpg">
+					<h2>二軍總教練</h2>
+					<h2><a href="http://twbsball.dils.tku.edu.tw/wiki/index.php/%E6%9E%97%E6%98%8E%E6%86%B2" target="_blank">林明憲</a></h2>
+				</div>
+				<div class="captain">
+					<img src="img/bc3.jpg">
+					<h2>隊長</h2>
+					<h2><a href="http://twbsball.dils.tku.edu.tw/wiki/index.php/%E7%8E%8B%E5%A8%81%E6%99%A8" target="_blank">王威晨</a></h2>
+				</div>		
+			</div>
+		</div>
+
+		<div id="item3">
+			<h2>樂天桃猿</h2>
+			<div class="teamname" >
+				<div class="teamlogo2">
+					<img src="img/mlogo.png">
+				</div>	
+				<div class="coach">
+					<img src="img/mc.jpg">
+					<h2>一軍總教練</h2>
+					<h2><a href="http://twbsball.dils.tku.edu.tw/wiki/index.php/%E6%9B%BE%E8%B1%AA%E9%A7%92" target="_blank">曾豪駒</a></h2>
+				</div>
+				<div class="coach1">
+					<img src="img/mc1.jpg">
+					<h2>首席教練</h2>
+					<h2><a href="http://twbsball.dils.tku.edu.tw/wiki/index.php/%E5%8F%A4%E4%B9%85%E4%BF%9D%E5%81%A5%E4%BA%8C" target="_blank">古久保健二</a></h2>
+				</div>	
+				<div class="coach2">
+					<img src="img/mc2.jpg">
+					<h2>二軍總教練</h2>
+					<h2><a href="http://twbsball.dils.tku.edu.tw/wiki/index.php/%E5%8A%89%E6%A6%AE%E8%8F%AF" target="_blank">劉榮華</a></h2>
+				</div>
+				<div class="captain">
+					<img src="img/mc3.jpg">
+					<h2>隊長</h2>
+					<h2><a href="http://twbsball.dils.tku.edu.tw/wiki/index.php/%E6%9E%97%E6%B3%93%E8%82%B2" target="_blank">林泓育</a></h2>
+				</div>		
+			</div>
+		</div>
+
+		<div id="item4">
+			<h2>富邦悍將</h2>
+			<div class="teamname" >
+				<div class="teamlogo1">
+					<img src="img/flogo.png">
+				</div>	
+				<div class="coach">
+					<img src="img/fc.jpg">
+					<h2>一軍總教練</h2>
+					<h2><a href="http://twbsball.dils.tku.edu.tw/wiki/index.php/%E4%B8%98%E6%98%8C%E6%A6%AE" target="_blank">丘昌榮</a></h2>
+				</div>
+				<div class="coach1">
+					<img src="img/fc1.jpg">
+					<h2>首席教練</h2>
+					<h2><a href="http://twbsball.dils.tku.edu.tw/wiki/index.php/%E9%BB%83%E6%B3%B0%E9%BE%8D" target="_blank">黃泰龍</a></h2>
+				</div>	
+				<div class="coach2">
+					<img src="img/fc2.jpg">
+					<h2>二軍總教練</h2>
+					<h2><a href="http://twbsball.dils.tku.edu.tw/wiki/index.php/%E9%99%B3%E9%87%91%E9%8B%92" target="_blank">陳金鋒</a></h2>
+				</div>
+				<div class="captain">
+					<img src="img/fc3.jpg">
+					<h2>隊長</h2>
+					<h2><a href="http://twbsball.dils.tku.edu.tw/wiki/index.php/%E6%9E%97%E5%93%B2%E7%91%84" target="_blank">林哲瑄</a></h2>
+				</div>
+			</div>
+		</div>
+
+		<div id="item5">
+			<h2>統一7-ELEVEn獅隊</h2>
+			<div class="teamname" >
+				<div class="teamlogo2">
+					<img src="img/llogo.png">
+				</div>	
+				<div class="coach">
+					<img src="img/lc.jpg">
+					<h2>一軍總教練</h2>
+					<h2><a href="http://twbsball.dils.tku.edu.tw/wiki/index.php/%E6%9E%97%E5%B2%B3%E5%B9%B3" target="_blank">林岳平</a></h2>
+				</div>
+				<div class="coach1">
+					<img src="img/lc1.jpg">
+					<h2>首席教練</h2>
+					<h2><a href="http://twbsball.dils.tku.edu.tw/wiki/index.php/%E9%AB%98%E5%BF%97%E7%B6%B1" target="_blank">高志綱</a></h2>
+				</div>	
+				<div class="coach2">
+					<img src="img/lc2.jpg">
+					<h2>二軍總教練</h2>
+					<h2><a href="http://twbsball.dils.tku.edu.tw/wiki/index.php/%E5%8A%89%E8%82%B2%E8%BE%B0" target="_blank">劉育辰</a></h2>
+				</div>
+				<div class="captain">
+					<img src="img/lc3.jpg">
+					<h2>隊長</h2>
+					<h2><a href="http://twbsball.dils.tku.edu.tw/wiki/index.php/%E6%9E%97%E5%B2%B1%E5%AE%89" target="_blank">林岱安</a></h2>
+				</div>
+			</div>
+		</div>
+
+		<div id="item6">
+			<h2>味全龍</h2>
+			<div class="teamname" >
+				<div class="teamlogo1">
+					<img src="img/dlogo.png">
+				</div>	
+				<div class="coach">
+					<img src="img/dc.png">
+					<h2>一軍總教練</h2>
+					<h2><a href="http://twbsball.dils.tku.edu.tw/wiki/index.php/%E8%91%89%E5%90%9B%E7%92%8B" target="_blank">葉君璋</a></h2>
+				</div>
+				<div class="coach1">
+					<img src="img/dc1.png">
+					<h2>首席教練</h2>
+					<h2><a href="http://twbsball.dils.tku.edu.tw/wiki/index.php/%E5%A1%9E%E6%9B%BCG.T" target="_blank">塞曼G.T</a></h2>
+				</div>	
+				<div class="coach2">
+					<img src="img/dc2.png">
+					<h2>二軍總教練</h2>
+					<h2><a href="http://twbsball.dils.tku.edu.tw/wiki/index.php/%E6%9E%97%E7%91%8B%E6%81%A9" target="_blank">林瑋恩</a></h2>
+				</div>
+				<div class="captain">
+					<img src="img/dc3.png">
+					<h2>隊長</h2>
+					<h2><a href="http://twbsball.dils.tku.edu.tw/wiki/index.php/%E5%90%B3%E6%9D%B1%E8%9E%8D" target="_blank">吳東融</a></h2>
+				</div>
+			</div>
+		</div>
+
+		<div id="item7">
+			<h1>各隊嬌點</h1>
+			<div class="lalateam" >
+				<h2><a href="https://www.brothers.tw/ps_teammatelist.php" target="_blank">Passion Sisters</a></h2>
+				<div id="bla" >
+					<img src="img/bla.jpg">
+				</div>
+				<button id="btnb" style="margin-left: 30%;font-size: 16px;border: none;padding: 10px 24px;border-radius: 12px;">吳函峮/峮峮</button>
+			</div>
+			<div class="lalateam" >
+				<h2><a href="https://monkeys.rakuten.com.tw/girls" target="_blank">Rakuten Girls</a></h2>
+				<div id="mla">
+					<img src="img/mla.jpg">
+				</div>
+				<button id="btnm" style="margin-left: 30%;font-size: 16px;border: none;padding: 10px 24px;border-radius: 12px;">李若潼/Tanya</button>
+			</div>
+			<div class="lalateam" >
+				<h2><a href="https://www.facebook.com/FubonAngels" target="_blank">Fubon Angels</a></h2>
+				<div id="fla">
+					<img src="img/fla.jpg">
+				</div>
+				<button id="btnf" style="margin-left: 30%;font-size: 16px;border: none;padding: 10px 24px;border-radius: 12px;">彭翊慈/慈妹</button>
+			</div>
+			<div class="lalateam" >
+				<h2><a href="https://www.facebook.com/loveunigirls" target="_blank">Uni Girls</a></h2>
+				<div id="lla">
+					<img src="img/lla.jpg">
+				</div>
+				<button id="btnl" style="margin-left: 30%;font-size: 16px;border: none;padding: 10px 24px;border-radius: 12px;">李亞璇/艾璐</button>
+			</div>
+			<div class="lalateam" >
+				<h2><a href="https://www.wdragons.com/beauty_list/" target="_blank">Dragons Beauties</a></h2>
+				<div id="dla">
+					<img src="img/dla.jpg">
+				</div>
+				<button id="btnd" style="margin-left: 30%;font-size: 16px;border: none;padding: 10px 24px;border-radius: 12px;">謝君白/君白</button>
+			</div>
+		</div>
+
+		<div id="item8">
+			<h1>國外新聞</h1>
+			<div class="outside" >
+				<a href="https://www.sportsv.net/articles/97394" target="_blank">
+					<img src="img/mlb1.png">
+					<h2>大谷翔平二縫線速球飆破百英里，Matt Duffy十二局下半再見安打助天使取勝</h2>
+				</a>
+			</div>
+			<div class="outside" >
+				<a href="https://www.sportsv.net/articles/97367" target="_blank">
+					<img src="img/mlb2.png">
+					<h2>Vaughn Grissom：崛起的勇士內野新星</h2>
+				</a>
+			</div>
+			<div class="outside" >
+				<a href="https://www.sportsv.net/articles/97350" target="_blank">
+					<img src="img/npb1.png">
+					<h2>最速161、飆9K！佐佐木朗希精彩完投歐力士　卻苦吞悲情一敗</h2>
+				</a>
+			</div>
+			<div class="outside" >
+				<a href="https://www.sportsv.net/articles/97242" target="_blank">
+					<img src="img/mlb2.png">
+					<h2>村上宗隆挑戰令和首位三冠王的最大關卡——打擊王</h2>
+				</a>
+			</div>
+		</div>		
+
+	</div>
+
+	<div id="footer">
+		<div id ="connect">
+			<img src="img/cpbl.png">
+		</div>
+		<div class="connect">
+			<a href="#item2">中信兄弟</a>
+		</div>
+		<div class="connect">
+			<a href="#item3">樂天桃猿</a>
+		</div>
+		<div class="connect">	
+			<a href="#item4">富邦悍將</a>
+		</div>
+		<div class="connect">	
+			<a href="#item5">統一7-ELEVEn獅隊</a>
+		</div>
+		<div class="connect">	
+			<a href="#item6">味全龍</a>
+		</div>
+		<div class="connect">	
+			<a href="#item7">啦啦隊</a>
+		</div>
+		<div class="clear"></div>
+		<hr>
+		<p>參考TVBS官網,經過修改的DEMO,POWER BY Ethan Liu.</p>
+	</div>
+
+</body>
+</html>
