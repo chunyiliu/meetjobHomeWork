@@ -13,11 +13,11 @@
 				function(){
 					$(this).find("ul").slideDown("fast");
 					$(this).find("a:first").addClass("active");
-					$("#menu").css("height","110px");
+					// $("#menu").css("height","110px"); 原本直接撐開menuv,修改過css後 則不需要撐開
 				},function(){
 					$(this).find(".submenu").fadeOut("fast");
 					$(this).find("a").removeClass("active");
-					$("#menu").css("height","25px");
+					// $("#menu").css("height","25px");
 				}
 			)
 			// content部分
@@ -82,12 +82,12 @@
 
 			$("#btnb").click(function(){
 				if (valueb==0){
-					$("#bla").slideDown();
+					$("#bla").show();
 					$("#item7").css({"min-height":"500"});
 					valueb=1;
 					valuea= valueb+valuem+valuef+valuel+valued;
 				}else{
-					$("#bla").slideUp();
+					$("#bla").hide();
 					valueb=0;
 					valuea= valueb+valuem+valuef+valuel+valued;
 					if (valuea%5==0&&valueb==0){
@@ -98,12 +98,12 @@
 
 			$("#btnm").click(function(){
 				if (valuem==0){
-					$("#mla").slideDown();
+					$("#mla").show();
 					$("#item7").css({"min-height":"500"});
 					valuem=1;
 					valuea= valueb+valuem+valuef+valuel+valued;
 				}else{
-					$("#mla").slideUp();
+					$("#mla").hide();
 					valuem=0;
 					valuea= valueb+valuem+valuef+valuel+valued;
 					if ((valuea)%5==0&&valuem==0){
@@ -113,12 +113,12 @@
 			});
 			$("#btnf").click(function(){
 				if (valuef==0){
-					$("#fla").slideDown();
+					$("#fla").show();
 					$("#item7").css({"min-height":"500"});
 					valuef=1;
 					valuea= valueb+valuem+valuef+valuel+valued;
 				}else{
-					$("#fla").slideUp();
+					$("#fla").hide();
 					valuef=0;
 					valuea= valueb+valuem+valuef+valuel+valued;
 					if ((valuea)%5==0&&valuef==0){
@@ -129,12 +129,12 @@
 
 			$("#btnl").click(function(){
 				if (valuel==0){
-					$("#lla").slideDown();
+					$("#lla").show();
 					$("#item7").css({"min-height":"500"});
 					valuel=1;
 					valuea= valueb+valuem+valuef+valuel+valued;
 				}else{
-					$("#lla").slideUp();
+					$("#lla").hide();
 					valuel=0;
 					valuea= valueb+valuem+valuef+valuel+valued;;
 					if ((valuea)%5==0&&valuel==0){
@@ -145,12 +145,12 @@
 
 			$("#btnd").click(function(){
 				if (valued==0){
-					$("#dla").slideDown();
+					$("#dla").show();
 					$("#item7").css({"min-height":"500"});
 					valued=1;
 					valuea= valueb+valuem+valuef+valuel+valued;
 				}else{
-					$("#dla").slideUp();
+					$("#dla").hide();
 					valued=0;
 					valuea= valueb+valuem+valuef+valuel+valued;
 					if ((valuea)%5==0&&valued==0){

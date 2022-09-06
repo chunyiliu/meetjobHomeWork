@@ -56,6 +56,8 @@
 	border-right:1px solid #DB7813;
 	float: left;
 	background-color:#DB7813;
+	position: relative; /*解決下拉選單被覆蓋*/
+	z-index: 9;			/*如果position 沒下 z-index會失效*/
 }
 
 #teamlist li ul{
