@@ -65,31 +65,98 @@
 				i--;
 				move();
 			}) 
+
+			// 啦啦隊顯示
 			$("#bla").hide();
 			$("#mla").hide();
 			$("#fla").hide();
 			$("#lla").hide();
 			$("#dla").hide();
+			var valueb = 0;
+			var valuem = 0;
+			var valuef = 0;
+			var valuel = 0;
+			var valued = 0;
+			var valuea ;
+
 
 			$("#btnb").click(function(){
-				$("#bla").slideToggle();
-				$("#item7").css({"min-height":"500"});
+				if (valueb==0){
+					$("#bla").slideDown();
+					$("#item7").css({"min-height":"500"});
+					valueb=1;
+					valuea= valueb+valuem+valuef+valuel+valued;
+				}else{
+					$("#bla").slideUp();
+					valueb=0;
+					valuea= valueb+valuem+valuef+valuel+valued;
+					if (valuea%5==0&&valueb==0){
+						$("#item7").css({"min-height":"150"});
+					}
+				}
 			});
+
 			$("#btnm").click(function(){
-				$("#mla").slideToggle();
-				$("#item7").css({"min-height":"500"});
+				if (valuem==0){
+					$("#mla").slideDown();
+					$("#item7").css({"min-height":"500"});
+					valuem=1;
+					valuea= valueb+valuem+valuef+valuel+valued;
+				}else{
+					$("#mla").slideUp();
+					valuem=0;
+					valuea= valueb+valuem+valuef+valuel+valued;
+					if ((valuea)%5==0&&valuem==0){
+						$("#item7").css({"min-height":"150"});
+					}
+				}
 			});
 			$("#btnf").click(function(){
-				$("#fla").slideToggle();
-				$("#item7").css({"min-height":"500"});
+				if (valuef==0){
+					$("#fla").slideDown();
+					$("#item7").css({"min-height":"500"});
+					valuef=1;
+					valuea= valueb+valuem+valuef+valuel+valued;
+				}else{
+					$("#fla").slideUp();
+					valuef=0;
+					valuea= valueb+valuem+valuef+valuel+valued;
+					if ((valuea)%5==0&&valuef==0){
+						$("#item7").css({"min-height":"150"});
+					}
+				}
 			});
+
 			$("#btnl").click(function(){
-				$("#lla").slideToggle();
-				$("#item7").css({"min-height":"500"});
+				if (valuel==0){
+					$("#lla").slideDown();
+					$("#item7").css({"min-height":"500"});
+					valuel=1;
+					valuea= valueb+valuem+valuef+valuel+valued;
+				}else{
+					$("#lla").slideUp();
+					valuel=0;
+					valuea= valueb+valuem+valuef+valuel+valued;;
+					if ((valuea)%5==0&&valuel==0){
+						$("#item7").css({"min-height":"150"});
+					}
+				}
 			});
+
 			$("#btnd").click(function(){
-				$("#dla").slideToggle();
-				$("#item7").css({"min-height":"500"});
+				if (valued==0){
+					$("#dla").slideDown();
+					$("#item7").css({"min-height":"500"});
+					valued=1;
+					valuea= valueb+valuem+valuef+valuel+valued;
+				}else{
+					$("#dla").slideUp();
+					valued=0;
+					valuea= valueb+valuem+valuef+valuel+valued;
+					if ((valuea)%5==0&&valued==0){
+						$("#item7").css({"min-height":"150"});
+					}
+				}
 			});
 
 		});
@@ -387,35 +454,35 @@
 				<div id="bla" >
 					<img src="img/bla.jpg">
 				</div>
-				<button id="btnb" style="margin-left: 30%;font-size: 16px;border: none;padding: 10px 24px;border-radius: 12px;">吳函峮/峮峮</button>
+				<button id="btnb" style="margin:10px 0 0 30%;font-size: 16px;border: none;padding: 10px 24px;border-radius: 12px;">吳函峮/峮峮</button>
 			</div>
 			<div class="lalateam" >
 				<h2><a href="https://monkeys.rakuten.com.tw/girls" target="_blank">Rakuten Girls</a></h2>
 				<div id="mla">
 					<img src="img/mla.jpg">
 				</div>
-				<button id="btnm" style="margin-left: 30%;font-size: 16px;border: none;padding: 10px 24px;border-radius: 12px;">李若潼/Tanya</button>
+				<button id="btnm" style="margin:10px 0 0 30%;font-size: 16px;border: none;padding: 10px 24px;border-radius: 12px;">李若潼/Tanya</button>
 			</div>
 			<div class="lalateam" >
 				<h2><a href="https://www.facebook.com/FubonAngels" target="_blank">Fubon Angels</a></h2>
 				<div id="fla">
 					<img src="img/fla.jpg">
 				</div>
-				<button id="btnf" style="margin-left: 30%;font-size: 16px;border: none;padding: 10px 24px;border-radius: 12px;">彭翊慈/慈妹</button>
+				<button id="btnf" style="margin:10px 0 0 30%;font-size: 16px;border: none;padding: 10px 24px;border-radius: 12px;">彭翊慈/慈妹</button>
 			</div>
 			<div class="lalateam" >
 				<h2><a href="https://www.facebook.com/loveunigirls" target="_blank">Uni Girls</a></h2>
 				<div id="lla">
 					<img src="img/lla.jpg">
 				</div>
-				<button id="btnl" style="margin-left: 30%;font-size: 16px;border: none;padding: 10px 24px;border-radius: 12px;">李亞璇/艾璐</button>
+				<button id="btnl" style="margin:10px 0 0 30%;font-size: 16px;border: none;padding: 10px 24px;border-radius: 12px;">李亞璇/艾璐</button>
 			</div>
 			<div class="lalateam" >
 				<h2><a href="https://www.wdragons.com/beauty_list/" target="_blank">Dragons Beauties</a></h2>
 				<div id="dla">
 					<img src="img/dla.jpg">
 				</div>
-				<button id="btnd" style="margin-left: 30%;font-size: 16px;border: none;padding: 10px 24px;border-radius: 12px;">謝君白/君白</button>
+				<button id="btnd" style="margin:10px 0 0 30%;font-size: 16px;border: none;padding: 10px 24px;border-radius: 12px;">謝君白/君白</button>
 			</div>
 		</div>
 

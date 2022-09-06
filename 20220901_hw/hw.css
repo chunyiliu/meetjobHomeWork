@@ -1,0 +1,526 @@
+
+
+*{
+	margin: 0;
+	list-style: none;
+	padding: 0;
+	text-decoration:none; 
+}
+
+
+#wrapper{
+
+	min-height: 100%; /* 整個區塊高度為100%*/
+	margin-bottom: -100px; /* 等一下 footer 的高度會是100px*/
+}
+/*banner 區塊*/
+#banner{
+	height: 70px;
+	width: 100%;
+}
+
+#logo img{
+	float: left;
+	height: 70px;
+}
+
+.wiki img{
+	float: right;
+	height: 70px;
+	width:70px;
+	padding-right: 20px;
+}
+
+/*menu 區塊*/
+#menu{
+/*	height:110px;*/
+	height:25px;
+	width: 100%;
+	background-color: #DB7813;
+}
+
+#teamlist{
+	font-size: 16px;
+	list-style: none;
+	
+	width: 100%;
+}
+
+#teamlist ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#teamlist li{
+	border-right:1px solid #DB7813;
+	float: left;
+	background-color:#DB7813;
+}
+
+#teamlist li ul{
+	position: absolute;
+	width: 150px;
+	margin: 0;
+	left: auto;
+}
+
+#teamlist a{
+	font-size: 20px;
+	color: #000000;
+	display: block;
+	text-decoration:none; 
+	width: 250px;
+	text-align: center;
+}
+
+.active{
+	background-color: #9999CC;
+	height: 25px;
+	}
+
+/*content 區塊*/
+#content{
+	width: 100%;
+	min-height: 770px;
+	background-color: #000000;
+}
+#leftframe{
+	float: left;
+	width: 900px;
+	height:760px;
+	margin-left: 30px;
+	border:1px solid #ccc;
+	position: relative;/*定位屬性*/
+	overflow: hidden;
+}
+#leftframe .img{
+	position: absolute;
+	width: 6300px;
+	left:0px;
+	top:0px;
+}
+#leftframe .img img{
+	width: 900px;
+	height: 760px;	
+	/*圖片的寬高 要跟banner一樣*/
+}
+
+#leftframe .img li{
+	float: left;
+
+}
+#leftframe .btn{
+	width: 30px;
+	height: 50px;
+	background-color: #ccc;
+	/*透明度寫法*/
+	opacity: 0.5;
+	position: absolute;
+	top:50%;
+	margin-top:-25px;
+
+	/*字體顏色*/
+	cursor: pointer; /*cursor 是用來改變滑鼠游標的形狀 pointer 手指去點的圖示*/
+	text-align: center;
+	line-height: 50px;
+	font-size: 50px;
+	color: #fff;
+	display: none;
+}
+#leftframe .left{
+	left: 0px;
+}
+#leftframe .right{
+	right: 0px;
+}
+#leftframe:hover .btn{
+	display: block;
+}
+
+
+#rightpic{
+	float: left;
+	position: relative;
+	width:605px;
+	height: 760px;
+	margin-left: 40px; 
+
+
+}
+
+.magazine{
+	width:100%;
+	height: 250px;
+	border-bottom: 2px solid #fff;
+	font-size: 16px;
+	font-weight:bold;
+	font-style: italic;
+	display: flex; /*flex 區域固定 要先下這句 下面才會有作用*/
+	flex-direction:column;
+	align-items: flex-start; 
+	justify-content: flex-end ; 
+}
+
+.magazine img{
+	width:100%;
+}
+
+.bg1{
+	color:#AAAAFF;
+	background:url("486.jpg") no-repeat; /*不重複 放大居中*/
+	background-size: cover;/* 值 盡可能地縮放背景圖片,並保持圖片的寬高比*/
+}
+
+.bg2{
+	color:#AAAAFF;
+	background:url("485.jpg") no-repeat; /*不重複 放大居中*/
+	background-size: cover;/* 值 盡可能地縮放背景圖片,並保持圖片的寬高比*/
+}
+
+.bg3{
+	color:#AAAAFF;
+	background:url("484.jpg") no-repeat; /*不重複 放大居中*/
+	background-size: cover;/* 值 盡可能地縮放背景圖片,並保持圖片的寬高比*/
+}
+/*item1 區塊*/
+#item1{
+	width: 100%;
+	min-height: 510px;
+	background-color: #F87243;
+	position: relative;
+}
+
+.todaynews{
+	width: 30%;
+	float: left;
+	height: 500px;
+	margin-left: 2%;
+	margin-top: 10px;
+
+}
+
+.todaynews img{
+	width: 100%;
+	height: 400px;
+}
+
+.nextnews{
+	width: 32%;
+	float: left;
+	height: 500px;
+	margin-left: 2%;
+	margin-top: 10px;
+
+}
+
+.nextnews h2{
+	height: 50px;
+	font-size: 22px;
+}
+/*item2 區塊 中信兄弟*/
+#item2{
+	width: 100%;
+	min-height: 530px;
+	background-color: 	#FFD306;
+}
+
+#item2 h2{
+	text-align: center;
+	font-size: 30px;
+}
+
+/*item3 區塊 樂天桃猿*/
+#item3{
+	width: 100%;
+	min-height: 530px;
+	background-color: #F00101;
+}
+#item3 h2{
+	text-align: center;
+	font-size: 30px;
+}
+/*item4 區塊 富邦悍將*/
+#item4{
+	width: 100%;
+	min-height: 530px;
+	background-color: #0B76D9;
+}
+
+#item4 h2{
+	text-align: center;
+	font-size: 30px;
+}
+/*item5 區塊 統一獅*/
+#item5{
+	width: 100%;
+	min-height: 530px;
+	background-color: #F07002;
+}
+#item5 h2{
+	text-align: center;
+	font-size: 30px;
+}
+/*item6 區塊 味全龍*/
+#item6{
+	width: 100%;
+	min-height: 530px;
+	background-color: #D9130B;
+}
+#item6 h2{
+	text-align: center;
+	font-size: 30px;
+}
+.teamname{
+	width: 100%;
+}
+
+.teamlogo1{
+	float: left;
+	width: 30%;
+	height:100px;
+}
+
+.teamlogo1 img{
+	width: 100%;
+}
+
+.teamlogo2{
+	float: right;
+	width: 30%;
+	height:100px;
+}
+
+.teamlogo2 img{
+	width: 100%;
+}
+
+.coach{
+	margin-left: 1%;
+	float: left;
+	width: 15%;
+	height:100px;
+}
+.coach img{
+	width: 100%;
+	height:300px;
+}
+.coach a{
+	text-decoration:none; 
+	font-style: italic;
+	color: #fff;
+}
+
+
+.coach1{
+	margin-left: 1%;
+	float: left;
+	width: 15%;
+	height:100px;
+}
+.coach1 img{
+	width: 100%;
+	height:300px;
+}
+
+.coach1 a{
+	text-decoration:none; 
+	font-style: italic;
+	color: #fff;
+}
+
+.coach2{
+	margin-left: 1%;
+	float: left;
+	width: 15%;
+	height:100px;
+}
+.coach2 img{
+	width: 100%;
+	height:300px;
+}
+
+.coach2 a{
+	text-decoration:none; 
+	font-style: italic;
+	color: #fff;
+}
+
+
+.captain{
+	margin-left: 1%;
+	float: left;
+	width: 17%;
+	height:100px;
+}
+.captain img{
+	width: 100%;
+	height:300px;
+}
+
+.captain a{
+	text-decoration:none; 
+	font-style: italic;
+	color: #fff;
+}
+
+
+/*item7 區塊 啦啦隊*/
+#item7{
+	width: 100%;
+	min-height: 150px;
+	background-color: #EBFDFE;
+	position: relative;
+}
+#item7 h1{
+	text-align: center;
+	font-size: 30px;
+}
+
+
+.lalateam{
+	width: 17%;
+	float: left;
+	margin-left: 2.5%;
+}
+
+.lalateam img{
+	padding-top: 5px;
+	width: 100%;
+	height: 350px;
+}
+
+.lalateam h2{
+	text-align:center;
+}
+
+
+#btnb {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #F8F10F;
+}
+
+#btnb:hover {
+  background-color: #F8F10F;
+  color: white;
+}
+
+#btnm {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #F00101;
+}
+
+#btnm:hover {
+  background-color: #F00101;
+  color: white;
+}
+
+#btnf {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #0B76D9;
+}
+
+#btnf:hover {
+  background-color: #0B76D9;
+  color: white;
+}
+
+
+#btnl {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #F07002;
+}
+
+#btnl:hover {
+  background-color: #F07002;
+  color: white;
+}
+
+
+
+#btnd {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #D9130B;
+}
+
+#btnd:hover {
+  background-color: #D9130B;
+  color: white;
+}
+
+/*國外職棒*/
+
+#item8{
+	width: 100%;
+	min-height: 350px;
+	background-color: #ffffff;
+}
+
+
+#item8 h1{
+	text-align: center;
+	font-size: 30px;
+}
+
+.outside{
+
+	width: 22%;
+	float:left;
+	min-height: 300px;
+	margin-left: 2%;
+	margin-top:5px;
+
+}
+
+.outside img{
+	width: 100%;
+}
+
+
+/*底部*/
+#footer{
+	height: 180px;
+	width: 100%;
+	background-color: #000000;
+	color: #ffffff;
+}
+#connect{
+	float: left;
+	height: 150px;
+	width:30%;
+}
+#connect img{
+	padding:10px 20%;
+}
+
+.connect{
+	float: left;
+	height: 47px;
+	width:33%;
+	text-align: center;
+	display: flex; /*flex 區域固定 要先下這句 下面才會有作用*/
+	align-items: center; 
+	justify-content: center ; 
+
+}
+.connect a{
+	font-size: 20px;
+	color:#B8B8DC;
+
+
+}
+
+#footer p{
+	position: absolute;
+	right: 0;
+
+}
+
+.clear{
+	clear: both;
+}
